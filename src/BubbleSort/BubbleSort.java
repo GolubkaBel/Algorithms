@@ -8,13 +8,8 @@ public class BubbleSort {
         h.ArrayRecipient();
         int length = h.array.length;
         while (length>1) {
-            for (int i=0; i<length-1; i++) {
-                int hi = h.array[i];
-                if (hi>h.array[i+1]) {
-                    h.array[i]=h.array[i+1];
-                    h.array[i+1]=hi;
-                }
-            }
+            for (int i=0; i<length-1; i++)
+                if (h.array[i]>h.array[i+1]) h.ArrayShiftElements(i, i+1);
             length--;
         }
         h.ArraySender();
