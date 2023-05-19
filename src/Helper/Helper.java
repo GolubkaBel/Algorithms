@@ -1,13 +1,11 @@
 package Helper;
 
-import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Helper {
     public int[] array;
     private long startSortTime;
-    Date date = new Date();
     public void ArrayRecipient() throws InputMismatchException, NegativeArraySizeException {
         try {
             System.out.print("Введите количество элементов: ");
@@ -16,7 +14,7 @@ public class Helper {
             array = new int[n];
             System.out.print("Введите элементы массива: ");
             for (int i=0; i<n; i++) array[i]= sc.nextInt();
-            startSortTime = date.getTime();
+            startSortTime = System.nanoTime();
         } catch(Exception e) {
             if (e instanceof InputMismatchException) {
                 System.out.print("На ввод ожидаются целочисленные значения!");
@@ -31,7 +29,7 @@ public class Helper {
         }
     }
     public void ArraySender() {
-        long sortTime = date.getTime()-startSortTime;
+        long sortTime = System.nanoTime()-startSortTime;
         System.out.print("Отсортированный массив: ");
         for (int a : array) System.out.print(a + "; ");
         System.out.print("\nВремя сортировки: " + sortTime);
