@@ -3,7 +3,7 @@ package Helper;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Helper {
+public class ArrayHelper {
     public int[] array;
     private long startSortTime;
     public void ArrayRecipient() throws InputMismatchException, NegativeArraySizeException {

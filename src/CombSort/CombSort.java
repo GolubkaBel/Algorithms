@@ -1,10 +1,10 @@
 package CombSort;
 
-import Helper.Helper;
+import Helper.ArrayHelper;
 
 public class CombSort {
     public static void main(String[] args) {
-        Helper h = new Helper();
+        ArrayHelper h = new ArrayHelper();
         h.ArrayRecipient();
         int length = h.array.length;
         int step = h.array.length-1;

@@ -1,10 +1,10 @@
 package InsertionSort;
 
-import Helper.Helper;
+import Helper.ArrayHelper;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        Helper h = new Helper();
+        ArrayHelper h = new ArrayHelper();
         h.ArrayRecipient();
         int length = h.array.length;
         int j;

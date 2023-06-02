@@ -1,10 +1,10 @@
 package ShellSort;
 
-import Helper.Helper;
+import Helper.ArrayHelper;
 
 public class ShellSort {
     public static void main(String[] args)  {
-        Helper h = new Helper();
+        ArrayHelper h = new ArrayHelper();
         h.ArrayRecipient();
         int length = h.array.length;
         int step = h.array.length/2;

@@ -1,10 +1,10 @@
 package BubbleSort;
 
-import Helper.Helper;
+import Helper.ArrayHelper;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        Helper h = new Helper();
+        ArrayHelper h = new ArrayHelper();
         h.ArrayRecipient();
         int length = h.array.length;
         while (length>1) {

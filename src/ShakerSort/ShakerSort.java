@@ -1,10 +1,10 @@
 package ShakerSort;
 
-import Helper.Helper;
+import Helper.ArrayHelper;
 
 public class ShakerSort {
     public static void main(String[] args) {
-        Helper h = new Helper();
+        ArrayHelper h = new ArrayHelper();
         h.ArrayRecipient();
         int left = 0; int right = h.array.length-1;
         while (left<right) {
