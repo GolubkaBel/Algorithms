@@ -14,13 +14,12 @@ public class BinaryTreeHelper {
             parent = new BinaryTreeHelper(value);
             return (parent);
         } else
-            if (parent.value > value)
+            if (parent.value >= value)
                 if (parent.leftChild==null) return (parent.leftChild = new BinaryTreeHelper(value));
                 else return insertNode(value, parent.leftChild);
-            else if (parent.value < value)
+            else
                 if (parent.rightChild==null) return (parent.rightChild = new BinaryTreeHelper(value));
                 else return insertNode(value, parent.rightChild);
-        return null;
     }
     private void printTree(BinaryTreeHelper node, int level) {
         if (node != null) {
@@ -32,9 +31,9 @@ public class BinaryTreeHelper {
     }
 
     public static void main(String[] args) {
-        int [] array = {1,6,7,3,5,74,35,6,2};
+        int [] array = {1, 1, 3, 4, 5 ,0};
         BinaryTreeHelper tree = new BinaryTreeHelper(array[0]);
-        for (int j : array) tree.insertNode(j, tree);
+        for (int j=1; j < array.length; j++) tree.insertNode(array[j], tree);
         tree.printTree(tree, 0);
     }
 }

@@ -20,7 +20,6 @@ public class SelectionSort {
             if (addressOfMin != addressOfStart) h.ArrayShiftElements(addressOfMin, addressOfStart);
             addressOfStart++;
         }
-
         h.ArraySender();
     }
 }
