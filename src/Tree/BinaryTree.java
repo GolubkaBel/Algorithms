@@ -58,6 +58,18 @@ public class BinaryTree extends Tree {
             return true;
         }
     }
+
+    @Override
+    public void traverse(Tree tree) {
+        if (tree.leftChild!=null) traverse(tree.leftChild);
+        printElement(tree.value);
+        if (tree.rightChild!=null) traverse(tree.rightChild);
+    }
+
+    private void printElement(int value) {
+        System.out.print(value + "; ");
+    }
+
     private static Tree searchParent(int value) { //возвращает ноль при ошибке
         Tree tree = root;
         while (tree!=null) {
@@ -78,14 +90,11 @@ public class BinaryTree extends Tree {
     }
 
     public static void main(String[] args) {
-        int [] array = {0, 3, 6, 2, 8, 1,  4, -1, 7};
+        int [] array = {0, 3, 6, 2, 8, 1,  4, -1, -2, -6, -4, -3, -5};
         root = new BinaryTree(array[0]);
         for (int j=1; j < array.length; j++) root.insert(array[j], root);
         root.print(root, 0);
-        System.out.println(root.value);
-        System.out.println(root.find(7, root).value);
-        System.out.println(searchParent(7));
-        root.remove(0, root);
-        root.print(root, 0);
+        System.out.println(searchParent(-6).value);
+        root.traverse(root);
     }
 }

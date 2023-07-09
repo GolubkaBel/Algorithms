@@ -13,4 +13,5 @@ public abstract class Tree {
     public abstract Tree find(int value, Tree tree);
     public abstract void print(Tree node, int level);
     public abstract boolean remove(int value, Tree tree);
+    public abstract  void traverse(Tree tree);
 }
